@@ -1,12 +1,12 @@
 import {StyleSheet} from "react-native";
-import { primary } from "./colors";
+import { background, primary } from "./colors";
 
 const styles = StyleSheet.create({
   main: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: primary,
+    backgroundColor: background,
   },
   textPrimary: {
     color: primary,

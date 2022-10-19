@@ -4,7 +4,7 @@ import styles from "../styles/styles";
 
 const Title = () => {
   return (
-    <Text style={styles.title}>Titulo</Text>
+    <Text style={styles.title}>Título</Text>
   );
 };
 
