@@ -1,5 +1,5 @@
-import React from "react";
-import {Text} from "react-native";
+import React from 'react';
+import {Text} from 'react-native';
 
 const HolaMundo = ({value, parametro1, propiedad2, fontSize}) => {
   let fondo = 'black';

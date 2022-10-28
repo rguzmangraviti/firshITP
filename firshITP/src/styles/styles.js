@@ -1,5 +1,5 @@
-import {StyleSheet} from "react-native";
-import { background, primary } from "./colors";
+import {StyleSheet} from 'react-native';
+import {background, primary} from './colors';
 
 const styles = StyleSheet.create({
   main: {
@@ -11,10 +11,10 @@ const styles = StyleSheet.create({
   textPrimary: {
     color: primary,
   },
-  title:{
+  title: {
     color: primary,
     fontSize: 18,
-  }
+  },
 });
 
 export default styles;

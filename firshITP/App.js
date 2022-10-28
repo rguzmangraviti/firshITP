@@ -1,8 +1,8 @@
-import React from "react";
-import {TouchableOpacity, View} from "react-native";
-import HolaMundo from "./src/componets/HolaMundo";
-import Title from "./src/componets/Title";
-import styles from "./src/styles/styles";
+import React from 'react';
+import {TouchableOpacity, View} from 'react-native';
+import HolaMundo from './src/componets/HolaMundo';
+import Title from './src/componets/Title';
+import styles from './src/styles/styles';
 
 const App = () => {
   return (
