@@ -33,6 +33,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     width: width - 30,
   },
+  description: {
+    color: 'blue',
+    fontSize: 18,
+  },
 });
 
 export default styles;
