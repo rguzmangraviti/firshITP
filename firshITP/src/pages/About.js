@@ -71,7 +71,7 @@ const About = ({navigation}) => {
       />
       <Text style={styles.description}>Acerca de</Text>
       <Button color="warning" title="Ir a -> Picture" onPress={irA} />
-      <View style={{width: '100%'}}>
+      <View style={styles.width100}>
         <FlatList
           showsVerticalScrollIndicator={false}
           data={DATA}
