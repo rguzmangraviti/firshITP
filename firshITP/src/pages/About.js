@@ -42,15 +42,17 @@ const DATA = [
 
 const arrayImg = [img1, img2, img3, img4];
 
-const item = values => (
+const itemRender = ({item}) => (
   <View>
-    <Text>{values.title}</Text>
-    <Text>{values.description}</Text>
-    <Text>{values.info}</Text>
+    <Text>{item.title}</Text>
+    <Text>{item.description}</Text>
+    <Text>{item.info}</Text>
   </View>
 );
 
-const itemImg = img => <Image source={img} containerStyle={styles.item} />;
+const itemImg = ({item}) => (
+  <Image source={item} containerStyle={styles.item} />
+);
 
 const keyExtractor = (item, index) => index.toString();
 
@@ -68,7 +70,11 @@ const About = ({navigation}) => {
       />
       <Text style={styles.description}>Acerca de</Text>
       <Button color="warning" title="Ir a -> Picture" onPress={irA} />
-      <FlatList data={DATA} renderItem={item} keyExtractor={keyExtractor} />
+      <FlatList
+        data={DATA}
+        renderItem={itemRender}
+        keyExtractor={keyExtractor}
+      />
     </View>
   );
 };
