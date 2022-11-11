@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, FlatList, Image} from 'react-native';
-import {Button} from '@rneui/themed';
+import {Button, ListItem} from '@rneui/themed';
 import styles from '../styles/styles';
 import img1 from '../assets/img1.jpeg';
 import img2 from '../assets/img2.jpeg';
@@ -40,19 +40,19 @@ const DATA = [
   },
 ];
 
-const arrayImg = [img1, img2, img3, img4];
+const arrayImg = [img1, img2, img3, img4, img1, img2, img3, img4];
 
 const itemRender = ({item}) => (
-  <View>
-    <Text>{item.title}</Text>
-    <Text>{item.description}</Text>
-    <Text>{item.info}</Text>
-  </View>
+  <ListItem bottomDivider>
+    <ListItem.Content>
+      <ListItem.Title>{item.title}</ListItem.Title>
+      <ListItem.Subtitle>{item.description}</ListItem.Subtitle>
+      <ListItem.Subtitle>{item.info}</ListItem.Subtitle>
+    </ListItem.Content>
+  </ListItem>
 );
 
-const itemImg = ({item}) => (
-  <Image source={item} containerStyle={styles.item} />
-);
+const itemImg = ({item}) => <Image source={item} style={styles.listimg} />;
 
 const keyExtractor = (item, index) => index.toString();
 
@@ -63,6 +63,7 @@ const About = ({navigation}) => {
   return (
     <View style={styles.main}>
       <FlatList
+        showsHorizontalScrollIndicator={true}
         horizontal={true}
         data={arrayImg}
         renderItem={itemImg}
@@ -70,11 +71,14 @@ const About = ({navigation}) => {
       />
       <Text style={styles.description}>Acerca de</Text>
       <Button color="warning" title="Ir a -> Picture" onPress={irA} />
-      <FlatList
-        data={DATA}
-        renderItem={itemRender}
-        keyExtractor={keyExtractor}
-      />
+      <View style={{width: '100%'}}>
+        <FlatList
+          showsVerticalScrollIndicator={false}
+          data={DATA}
+          renderItem={itemRender}
+          keyExtractor={keyExtractor}
+        />
+      </View>
     </View>
   );
 };

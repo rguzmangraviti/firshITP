@@ -31,6 +31,12 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     backgroundColor: 'red',
   },
+  listimg: {
+    width: 100,
+    height: 100,
+    resizeMode: 'cover',
+    backgroundColor: 'red',
+  },
   txt: {
     fontSize: 18,
     width: width - 30,
