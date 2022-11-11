@@ -28,6 +28,8 @@ const styles = StyleSheet.create({
   item: {
     width: width - 30,
     height: width - 30,
+    resizeMode: 'cover',
+    backgroundColor: 'red',
   },
   txt: {
     fontSize: 18,
