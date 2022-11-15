@@ -28,6 +28,14 @@ const styles = StyleSheet.create({
   item: {
     width: width - 30,
     height: width - 30,
+    resizeMode: 'cover',
+    backgroundColor: 'red',
+  },
+  listimg: {
+    width: 100,
+    height: 100,
+    resizeMode: 'cover',
+    backgroundColor: 'red',
   },
   txt: {
     fontSize: 18,
@@ -36,6 +44,9 @@ const styles = StyleSheet.create({
   description: {
     color: 'blue',
     fontSize: 18,
+  },
+  width100: {
+    width: '100%',
   },
 });
 
